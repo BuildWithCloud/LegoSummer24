@@ -13,5 +13,5 @@ drive_base.turn(180)
 #number in degrees
 #Gyro Drive
 drive_base.use_gyro(True)
-#put before drivebase
+#put before first movement
 #Acceleration Drive
