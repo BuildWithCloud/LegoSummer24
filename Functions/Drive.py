@@ -5,12 +5,7 @@ from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch
 import Setup
 
-#Basic Drive
-drive_base.straight(500)
-#number in mm
-#Drive With Turn
-drive_base.turn(180)
-#number in degrees
+
 #Gyro Drive
 drive_base.use_gyro(True)
 #put before first movement
