@@ -21,7 +21,7 @@ class Bary:
     RDrive = Motor(Port.F, Direction.CLOCKWISE, profile=2)
 
     #Drive
-    Drive = DriveBase(LDrive, RDrive, diameter, axle track)
+    Drive = DriveBase(LDrive, RDrive, wheel_diameter = 56, axle_track = 103.61)
     Drive.use_gyro(True)
-    Drive.settings(200, 100, 30, 15)
+    Drive.heading_control.pid()
     #TODO, add the wheelbase and diameter 
