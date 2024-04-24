@@ -23,4 +23,5 @@ class Bary:
     #Drive
     Drive = DriveBase(LDrive, RDrive, diameter, axle track)
     Drive.use_gyro(True)
+    Drive.settings(200, 100, 30, 15)
     #TODO, add the wheelbase and diameter 
