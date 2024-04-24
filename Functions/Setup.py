@@ -11,3 +11,5 @@ class Gary:
     RAttach = Motor(Port.D)
     LDrive = Motor(Port.E, Direction.COUNTERCLOCKWISE, profile=2)
     RDrive = Motor(Port.F, Direction.CLOCKWISE, profile=2)
+    Drive = DriveBase(LDrive, RDrive, diameter, axle track )
+    #TODO, add the wheelbase and diameter 
