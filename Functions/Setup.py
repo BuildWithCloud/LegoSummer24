@@ -21,6 +21,6 @@ class Gary:
     RDrive = Motor(Port.F, Direction.CLOCKWISE, profile=2)
 
     #Drive
+    Drive.use_gyro(True)
     Drive = DriveBase(LDrive, RDrive, diameter, axle track )
     #TODO, add the wheelbase and diameter 
-    Drive.use_gyro(True)
