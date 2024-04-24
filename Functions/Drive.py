@@ -7,6 +7,6 @@ import Setup
 
 
 #Gyro Drive
-drive_base.use_gyro(True)
+#drive_base.use_gyro(True)
 #put before first movement
 #Acceleration Drive
