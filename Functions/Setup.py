@@ -4,7 +4,7 @@ from pybricks.parameters import Button, Color, Direction, Port, Side, Stop, Axis
 from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch
 
-class Gary:
+class Bary:
     #Hub
     hub = PrimeHub(top_side=Axis.Z, front_side=-Axis.Y)
     hub.display.orientation(Side.LEFT)
@@ -12,15 +12,15 @@ class Gary:
 
     #Sensors
     LCol = ColorSensor(Port.A)
-    RCol = ColorSensor(Port.E)
+    RCol = ColorSensor(Port.B)
 
     #Motors
-    LAttach = Motor(Port.B)
+    LAttach = Motor(Port.C)
     RAttach = Motor(Port.D)
-    LDrive = Motor(Port.C, Direction.COUNTERCLOCKWISE, profile=2)
+    LDrive = Motor(Port.E, Direction.COUNTERCLOCKWISE, profile=2)
     RDrive = Motor(Port.F, Direction.CLOCKWISE, profile=2)
 
     #Drive
+    Drive = DriveBase(LDrive, RDrive, diameter, axle track)
     Drive.use_gyro(True)
-    Drive = DriveBase(LDrive, RDrive, diameter, axle track )
     #TODO, add the wheelbase and diameter 
