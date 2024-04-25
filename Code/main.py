@@ -9,4 +9,5 @@ import DriveBaseTest
 def main():
     DriveBaseTest.DriveBaseTest()
 
-run_task(main)
+main()
+wait(100000)
