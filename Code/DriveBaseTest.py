@@ -6,8 +6,9 @@ from pybricks.tools import wait, StopWatch
 import Setup
 
 def DriveBaseTest():
-    Setup.Bary.Drive.settings(200, 100)
-    Setup.Bary.Drive.straight(1000, wait = True)
-    while Setup.Bary.hub.buttons.pressed() == None:
-        pass
-    Setup.Bary.Drive.turn(360, wait = True)
+    Setup.Bary.Drive.settings(straight_speed=400, straight_acceleration=200, turn_rate = 90, turn_acceleration = 90)
+  #  Setup.Bary.Drive.straight(distance=1000, wait = True)
+    Setup.Bary.Drive.turn(angle=0, wait = True)
+    #Setup.Bary.Drive.curve()
+    
+    
