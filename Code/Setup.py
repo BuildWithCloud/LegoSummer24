@@ -17,11 +17,11 @@ class Bary:
     #Motors
     LAttach = Motor(Port.C)
     RAttach = Motor(Port.D)
-    LDrive = Motor(Port.E, Direction.COUNTERCLOCKWISE, profile=2)
-    RDrive = Motor(Port.F, Direction.CLOCKWISE, profile=2)
+    LDrive = Motor(Port.E, Direction.COUNTERCLOCKWISE)
+    RDrive = Motor(Port.F, Direction.CLOCKWISE)
 
     #Drive
     Drive = DriveBase(LDrive, RDrive, wheel_diameter = 55.05, axle_track = 97.5)
     Drive.use_gyro(True)
-    Drive.heading_control.pid(kp=500000, kd=1000)
+    Drive.heading_control.pid(kp=215000, kd=10000, ki=220)
     #TODO, add the wheelbase and diameter 
