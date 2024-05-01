@@ -5,9 +5,11 @@ from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch, run_task
 import Setup
 import DriveBaseTest
+import LineFunctions
 
 def main():
-    DriveBaseTest.DriveBaseTest()
+    #DriveBaseTest.DriveBaseTest()
+    Setup.Bary.Drive.angle(LineFunctions.AngleToLine())
 
 main()
 wait(100000)
