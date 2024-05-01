@@ -11,8 +11,9 @@ class Bary:
     hub.system.set_stop_button(Button.BLUETOOTH)
 
     #Sensors
-    LCol = ColorSensor(Port.A)
-    RCol = ColorSensor(Port.B)
+    LCol = ColorSensor(Port.B)
+    RCol = ColorSensor(Port.A)
+    ColDistance = 79
 
     #Motors
     LAttach = Motor(Port.C)
@@ -24,4 +25,3 @@ class Bary:
     Drive = DriveBase(LDrive, RDrive, wheel_diameter = 55.05, axle_track = 97.5)
     Drive.use_gyro(True)
     Drive.heading_control.pid(kp=215000, kd=10000, ki=220)
-    #TODO, add the wheelbase and diameter 
