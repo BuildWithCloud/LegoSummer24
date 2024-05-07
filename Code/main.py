@@ -9,7 +9,7 @@ import LineFunctions
 
 def main():
     #DriveBaseTest.DriveBaseTest()
-    Setup.Bary.Drive.angle(LineFunctions.AngleToLine())
+    Setup.Bary.Drive.turn(-LineFunctions.AngleToLine())
 
 main()
 wait(100000)
