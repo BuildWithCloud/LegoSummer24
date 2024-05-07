@@ -14,6 +14,7 @@ class Bary:
     LCol = ColorSensor(Port.B)
     RCol = ColorSensor(Port.A)
     ColDistance = 79
+    ColTolerance = 8
 
     #Motors
     LAttach = Motor(Port.C)
