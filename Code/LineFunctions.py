@@ -3,23 +3,25 @@ from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSenso
 from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
 from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch
-#import math
+import umath
 import Setup
 #def LineSquare():
 
 def AngleToLine():
     Setup.Bary.Drive.drive(100,0)
-    while Setup.Bary.LCol.reflection() > 25 and Setup.Bary.RCol.reflection() > 25:
+    while Setup.Bary.LCol.reflection() > Setup.Bary.ColTolerance and Setup.Bary.RCol.reflection() > Setup.Bary.ColTolerance:
         pass
     dIstance = Setup.Bary.Drive.distance()
-    if Setup.Bary.LCol.reflection() < 25:
+    if Setup.Bary.LCol.reflection() < Setup.Bary.ColTolerance:
         Setup.Bary.hub.display.pixel(1, 1, 100)
-        while Setup.Bary.RCol.reflection() > 25:
+        while Setup.Bary.RCol.reflection() > Setup.Bary.ColTolerance:
             pass
-        move = Setup.Bary.Drive.distance() - distance
+        move = Setup.Bary.Drive.distance() - dIstance
     else:
-        pass
+        Setup.Bary.hub.display.pixel(1, 1, 100)
+        while Setup.Bary.LCol.reflection() > Setup.Bary.ColTolerance:
+            pass
+        move = -Setup.Bary.Drive.distance() + dIstance
     Setup.Bary.Drive.stop()
-    wait(1000)
-    Setup.Bary.Drive.straight(distance=dIstance)
-    return (math.atan(dIstance/Setup.Bary.ColDistance))
+    
+    return umath.degrees(umath.atan(move/Setup.Bary.ColDistance))
